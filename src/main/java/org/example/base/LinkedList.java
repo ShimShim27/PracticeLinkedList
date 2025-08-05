@@ -1,0 +1,11 @@
+package org.example.base;
+
+import org.example.data.Node;
+
+public interface LinkedList {
+    void setCurrentValue(final Integer value);
+    void setNextValue(final Integer value);
+    Integer getPrevValue();
+    Integer getNextValue();
+    Integer getSum();
+}
