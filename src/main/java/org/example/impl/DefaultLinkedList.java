@@ -16,6 +16,11 @@ public class DefaultLinkedList implements LinkedList {
     }
 
     @Override
+    public Integer getCurrentValue() {
+        return null;
+    }
+
+    @Override
     public Integer getPrevValue() {
         return null;
     }
