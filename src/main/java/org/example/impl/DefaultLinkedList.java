@@ -6,12 +6,12 @@ import org.example.data.Node;
 public class DefaultLinkedList implements LinkedList {
 
     @Override
-    public void setCurrentValue(Integer value) {
+    public void setCurrentValue(final int value) {
 
     }
 
     @Override
-    public void setNextValue(Integer value) {
+    public void setNextValue(final int value) {
 
     }
 
