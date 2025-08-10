@@ -1,6 +1,10 @@
 package org.example.data;
 
+import lombok.Data;
+
+@Data
 public class Node {
     private int value;
-    private Node nextNode;
+    private Node next;
+    private Node prev;
 }

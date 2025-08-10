@@ -29,7 +29,7 @@ public class Main {
         linkedList.setCurrentValue(5);
         printValue(linkedList.getCurrentValue());
 
-        print(String.format("Is sum equal to 8 : %s", linkedList.getSum() == 8));
+        print(String.format("Is sum equal to -3 : %s", linkedList.getSum() == -3));
     }
 
     private static void printValue(final Integer value) {

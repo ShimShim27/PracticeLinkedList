@@ -77,7 +77,7 @@ public class DefaultLinkedListTest {
 
         defaultLinkedList.setNextValue(10);
         assertNull(defaultLinkedList.getPrevValue());
-        assertEquals(5, defaultLinkedList.getNextValue());
+        assertEquals(10, defaultLinkedList.getNextValue());
 
         defaultLinkedList.getNextValue();
 
@@ -94,13 +94,14 @@ public class DefaultLinkedListTest {
         defaultLinkedList.setNextValue(12);
         defaultLinkedList.getNextValue();
 
+        defaultLinkedList.getPrevValue();
 
         defaultLinkedList.setNextValue(39);
         defaultLinkedList.getNextValue();
 
         defaultLinkedList.getPrevValue();
 
-        assertEquals(28, defaultLinkedList.getSum());
+        assertEquals(81, defaultLinkedList.getSum());
 
     }
 
@@ -131,4 +132,34 @@ public class DefaultLinkedListTest {
 
         assertEquals(99, defaultLinkedList.getSum());
     }
+
+
+
+    @Test
+    @DisplayName("Get sum should not change reference")
+    public void GetSum_ShouldNot_ChangeReference() {
+        defaultLinkedList.setNextValue(77);
+        defaultLinkedList.getNextValue();
+        defaultLinkedList.setNextValue(11);
+        defaultLinkedList.getNextValue();
+        defaultLinkedList.setNextValue(28);
+        defaultLinkedList.getNextValue();
+        defaultLinkedList.setNextValue(35);
+        defaultLinkedList.getNextValue();
+        defaultLinkedList.setNextValue(-10);
+        defaultLinkedList.getNextValue();
+        defaultLinkedList.setNextValue(12);
+        defaultLinkedList.getNextValue();
+        defaultLinkedList.setNextValue(83);
+        defaultLinkedList.getNextValue();
+
+        defaultLinkedList.getPrevValue();
+        defaultLinkedList.getPrevValue();
+        defaultLinkedList.getPrevValue();
+        defaultLinkedList.getNextValue();
+
+        assertEquals(-10, defaultLinkedList.getCurrentValue());
+
+    }
+
 }
